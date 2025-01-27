@@ -8,7 +8,6 @@
 #include <tensor.hpp>
 #include <vector>
 
-// Function to compute the softmax
 std::shared_ptr<Tensor> softmax(const std::shared_ptr<Tensor> inputs) {
     if (inputs->dimensions.size() != 2 || inputs->dimensions[0] != 1) {
         throw std::invalid_argument("Must be a tensor/row vector of dimension (1,N)");

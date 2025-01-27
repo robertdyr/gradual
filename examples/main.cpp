@@ -59,8 +59,8 @@ int main(int argc, char* argv[]) {
 
     // first lets see the predicted classes before training
     for (int i = 0; i < training_data.first.size(); i++) {
-        auto intermediate_1 = matMul1->mul(training_data.first[i], w1);  // shape should be (1, 2)
-        auto intermediate2 = tenAdd1->add(intermediate_1, b1);           // shape should be (1, 2)
+        auto intermediate1 = matMul1->mul(training_data.first[i], w1);  // shape should be (1, 2)
+        auto intermediate2 = tenAdd1->add(intermediate1, b1);           // shape should be (1, 2)
         auto intermediate3 = relu1->relu(intermediate2);
         auto intermediate4 = matMul2->mul(intermediate3, w2);
         auto intermediate5 = tenAdd2->add(intermediate4, b2);
@@ -90,8 +90,8 @@ int main(int argc, char* argv[]) {
     //=========================================================================== training
     // first lets see the predicted classes before training
     for (int i = 0; i < training_data.first.size(); i++) {
-        auto intermediate_1 = matMul1->mul(training_data.first[i], w1);  // shape should be (1, 2)
-        auto intermediate2 = tenAdd1->add(intermediate_1, b1);           // shape should be (1, 2)
+        auto intermediate1 = matMul1->mul(training_data.first[i], w1);  // shape should be (1, 2)
+        auto intermediate2 = tenAdd1->add(intermediate1, b1);           // shape should be (1, 2)
         auto intermediate3 = relu1->relu(intermediate2);
         auto intermediate4 = matMul2->mul(intermediate3, w2);
         auto intermediate5 = tenAdd2->add(intermediate4, b2);
@@ -119,8 +119,8 @@ int main(int argc, char* argv[]) {
 
     // first lets see the predicted classes before training
     for (int i = 0; i < training_data.first.size(); i++) {
-        auto intermediate_1 = matMul1->mul(training_data.first[i], w1);  // shape should be (1, 2)
-        auto intermediate2 = tenAdd1->add(intermediate_1, b1);           // shape should be (1, 2)
+        auto intermediate1 = matMul1->mul(training_data.first[i], w1);  // shape should be (1, 2)
+        auto intermediate2 = tenAdd1->add(intermediate1, b1);           // shape should be (1, 2)
         auto intermediate3 = relu1->relu(intermediate2);
         auto intermediate4 = matMul2->mul(intermediate3, w2);
         auto intermediate5 = tenAdd2->add(intermediate4, b2);
