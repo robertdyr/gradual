@@ -127,7 +127,7 @@ std::shared_ptr<Tensor> CrossEntropy::calculate(std::shared_ptr<Tensor> y_logits
 
     auto y_hat = softmax(y_logits);
 
-    // Step 2: Calculate cross-entropy loss
+    // simplifed non batched cross entropy
     const auto& predictions = y_hat->data;
     const auto& labels = y_actual->data;
 
